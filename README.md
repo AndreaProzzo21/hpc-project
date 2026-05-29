@@ -190,8 +190,7 @@ comm.Reduce(local_count, global_count, op=MPI.SUM, root=0)
 
 ```
 
-
-5. Rank 0 computes the final value: $\pi \approx 4 \times \frac{\text{global\_count}}{N}$.
+5. Rank 0 computes the final value.
 
 
 
