@@ -11,15 +11,20 @@
 * **The Global Interpreter Lock (GIL):** A crucial topic for HPC. Explain that the GIL prevents multiple native threads from executing Python bytecodes at once, making standard Python multithreading ineffective for CPU-bound tasks (hence the strict reliance on multiprocessing/MPI).
 * **Memory Overhead:** Contrast Fortran's raw, contiguous memory allocation with Python's object model (where even a simple integer is a C structure with reference counters and type info).
 
+* **1.1 Jupyter Lab:** what is jupyter lab? ,enviorment, Limitations (give general and HPC Perspective).
+* **1.2 File I/O & Error handling:** Define the I/O operation & Error Handling with commands & Its syntax, provide comparasion with fortran, discussing limitations , pros & Cons  (HPC Perspective)
+* **1.3 Data types , Data Structures & Flow Control (Parameter Sweeping):** define data types ,structure flow control (conditional statement & Loops) , command syntax, provide comparasion with fortran, discussing limitations , pros & Cons  (HPC Perspective)
+* **1.4 Classes, functions:** Define OOP concept of Classes, funtion, commands used and its syntax, provide comparasion with fortran, discussing limitations , pros & Cons (HPC Perspective)
+* **1.5 SciPy & NumPy:**  libraries Pros and cons (HPC perspective) ,commands and their syntax.
 ### 🔹 Practical Exercise Hint for the Team:
 
-* **Exercise 1.1 (File I/O & Error Handling):** Write a script that reads a text file (`.dat`) containing large matrices or grid coordinates (simulating Fortran outputs). Use a `try-except` block to catch `FileNotFoundError` or `ValueError` during parsing. Convert rows into custom Python Python `classes` representing physical nodes, demonstrating data encapsulation.
+* **Exercise 1.2 (File I/O & Error Handling):** Write a script that reads a text file (`.dat`) containing large matrices or grid coordinates (simulating Fortran outputs). Use a `try-except` block to catch `FileNotFoundError` or `ValueError` during parsing. Convert rows into custom Python Python `classes` representing physical nodes, demonstrating data encapsulation.
 
 ---
 
 ### 📋 Additional Examples for PHASE 1: Core Fundamentals
 
-**Example 1.2: Data Structures & Flow Control (Parameter Sweeping)**
+* **Excercise 1.3: Data types, Data structures & Flow Control (Parameter Sweeping)**
 *Context: In Fortran, managing heterogeneous data often requires complex derived types or multiple arrays. Python handles this elegantly with dictionaries and lists, which is highly useful for running simulations across a range of parameters.*
 
 ```python
@@ -42,7 +47,7 @@ print(f"Simulation sweep completed. Results (T, V): {results}")
 
 ```
 
-**Example 1.3: Classes, Functions, and Exceptions (Particle Kinematics)**
+**Excercise 1.4: Classes, Functions, and Exceptions (Particle Kinematics)**
 *Context: Demonstrating Object-Oriented Programming (OOP) and error handling. Python's `try-except` blocks prevent the entire HPC cluster from crashing due to a single mathematical anomaly (like division by zero).*
 
 ```python
@@ -67,6 +72,7 @@ photon = Particle(mass=0.0, velocity=299792458)
 accel = photon.compute_acceleration(force=10.0) 
 
 ```
+**Excercise 1.5: SciPy and NumPy:** examples in HPC Perspective.
 
 ---
 
