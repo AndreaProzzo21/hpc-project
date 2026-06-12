@@ -1,1 +1,1 @@
-This README will contain the final detail and presentation of the project. Once the case study will be defined, we can elaborate a short but effective README to explain the major phases and concepts of our work.
+This readme will contain the final summary of the project.
