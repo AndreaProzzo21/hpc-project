@@ -18,7 +18,7 @@ Through a series of Jupyter Notebooks, we explore the core architectural differe
 * **0.2 File I/O & Error Handling:** Syntax and commands for reading/writing data. We compare Python's flexible context managers and robust exception handling (`try-except`) against Fortran's rigid I/O routines.
 * **0.3 Data Types, Structures & Flow Control:** Parameter sweeping and logic handling. We contrast Python's dynamic lists, dictionaries, and iteration mechanics with Fortran's static arrays and index-based loops.
 * **0.4 Classes and Functions (OOP):** Exploring Object-Oriented concepts in Python to abstract physical problems, comparing them with Fortran's subroutines and modules.
-* **0.6 The Scientific Stack (NumPy & SciPy):** Introduction to the libraries that bridge the performance gap. We evaluate syntax, commands, and the HPC pros and cons of using vectorized operations backed by C/Fortran to bypass Python's inherent bottlenecks.
+
 
 ---
-*Note: All examples, theoretical anchors, and code snippets for these topics are contained within the Jupyter Notebooks (`.ipynb`) located in this directory.*
+*Note: All examples, theoretical concepts, and code snippets for these topics are contained within the Jupyter Notebooks (`.ipynb`) located in this directory.*
