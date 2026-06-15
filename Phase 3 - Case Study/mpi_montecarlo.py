@@ -41,14 +41,21 @@ def load_or_create_config(filename):
             line = line.strip()
             if "=" in line and not line.startswith("#"):
                 key, val = line.split("=")
-                # If there is a dot, it's a float (decimal), otherwise it's an integer
-                if "." in val:
-                    config[key.strip()] = float(val.strip())
-                else:
-                    config[key.strip()] = int(val.strip())
+                config[key.strip()] = parse_config_value(val)
     # Return the dictionary with all our loaded settings
     return config
-    
+
+
+def parse_config_value(value):
+    """
+    If there is a dot, it's a float (decimal), otherwise it's an integer
+    """
+    value = value.strip()
+
+    try:
+        return int(value)
+    except ValueError:
+        return float(value)
 
 def PI():
     """
