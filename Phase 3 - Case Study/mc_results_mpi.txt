@@ -1,0 +1,56 @@
+--- MONTE CARLO HPC REPORT ---
+MPI Processes : 1
+Total Points  : 20140000
+Dimensions    : 3D
+Radius        : 0.5
+Pi Estimate   : 3.14159344587885
+Final Volume    : 0.52359891
+Compute Time  : 595.2358 seconds
+--- MONTE CARLO HPC REPORT ---
+MPI Processes : 2
+Total Points  : 22260000
+Dimensions    : 3D
+Radius        : 0.5
+Pi Estimate   : 3.14159299191375
+Final Volume    : 0.52359883
+Compute Time  : 364.6349 seconds
+--- MONTE CARLO HPC REPORT ---
+MPI Processes : 4
+Total Points  : 16620000
+Dimensions    : 3D
+Radius        : 0.5
+Pi Estimate   : 3.14159205776173
+Final Volume    : 0.52359868
+Compute Time  : 127.1492 seconds
+--- MONTE CARLO HPC REPORT ---
+MPI Processes : 8
+Total Points  : 23040000
+Dimensions    : 3D
+Radius        : 0.5
+Pi Estimate   : 3.14159270833333
+Final Volume    : 0.52359878
+Compute Time  : 183.7365 seconds
+--- MONTE CARLO HPC REPORT ---
+MPI Processes : 12
+Total Points  : 5920000
+Dimensions    : 3D
+Radius        : 0.5
+Pi Estimate   : 3.14159189189189
+Final Volume    : 0.52359865
+Compute Time  : 11.0931 seconds
+--- MONTE CARLO HPC REPORT ---
+MPI Processes : 16
+Total Points  : 17080000
+Dimensions    : 3D
+Radius        : 0.5
+Pi Estimate   : 3.14159332552693
+Final Volume    : 0.52359889
+Compute Time  : 70.7551 seconds
+--- MONTE CARLO HPC REPORT ---
+MPI Processes : 20
+Total Points  : 4080000
+Dimensions    : 3D
+Radius        : 0.5
+Pi Estimate   : 3.14159264705882
+Final Volume    : 0.52359877
+Compute Time  : 3.3915 seconds
