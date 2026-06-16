@@ -41,7 +41,10 @@ Progetto/
 |
 |-- Phase 3 - Case Study/
 |   |-- CaseStudy.ipynb
+|   |-- MPI_Scaling_Analysis.ipynb
+|   |-- mc_results_mpi.txt
 |   |-- mpi_montecarlo.py
+|   |-- LYRA_RUN_GUIDE.md
 |   `-- README.md
 |
 |-- requirements.txt
@@ -146,10 +149,27 @@ until the estimate reaches a target precision. This connects numerical accuracy
 with computational cost: a stricter convergence threshold generally requires
 more samples and therefore more execution time.
 
-Performance is analyzed through standard HPC metrics such as speedup and
-efficiency. This analysis is useful for understanding when adding more MPI
-processes improves performance and when communication overhead, random
-convergence behavior, or problem size can limit the expected scaling.
+This phase is organized around complementary materials:
+
+- `CaseStudy.ipynb` introduces the exercise, the Monte Carlo method, and the
+  parallelization strategy.
+- `mpi_montecarlo.py` contains the MPI implementation used for the simulations.
+- `mc_results_mpi.txt` stores the collected execution results.
+- `MPI_Scaling_Analysis.ipynb` parses these results and studies the scaling
+  behavior of the code.
+- `LYRA_RUN_GUIDE.md` summarizes the practical steps needed to run the code on
+  the university cluster.
+
+Performance is analyzed through standard HPC metrics such as execution time,
+speedup, and efficiency, starting from a 1-process reference run. The analysis
+also includes throughput and the absolute error on the pi estimate, which helps
+separate numerical quality from runtime behavior.
+
+At the same time, the results must be interpreted carefully: because the code
+uses a dynamic convergence criterion, different runs may stop after different
+numbers of sampled points. For this reason, the scaling analysis is informative
+but not equivalent to a perfectly controlled strong-scaling benchmark with a
+strictly fixed workload.
 
 ## Main Takeaways
 
@@ -199,8 +219,8 @@ The notebooks can be opened with Jupyter:
 jupyter notebook
 ```
 
-To run the Monte Carlo MPI case study, an MPI runtime must also be available on
-the system. The script can then be executed with a command such as:
+To run the Monte Carlo MPI case study locally, an MPI runtime must also be
+available on the system. The script can then be executed with a command such as:
 
 ```bash
 mpirun -np 4 python "Phase 3 - Case Study/mpi_montecarlo.py"
@@ -208,12 +228,17 @@ mpirun -np 4 python "Phase 3 - Case Study/mpi_montecarlo.py"
 
 The number after `-np` defines how many MPI processes are launched.
 
+For execution on LYRA, the practical workflow used in this project is described
+in `Phase 3 - Case Study/LYRA_RUN_GUIDE.md`. In particular, the cluster setup
+relies on the available Anaconda Python distribution, a virtual environment
+created with `--system-site-packages`, and a separate installation of `mpi4py`.
+
 ## Final Comment
 
 This project follows a progressive path: first it identifies the limitations of
 pure Python for HPC, then it introduces the scientific and parallel tools used
 to overcome those limitations, and finally it applies them to a concrete Monte
-Carlo simulation.
+Carlo simulation together with an analysis of the observed scaling behavior.
 
 The overall result is a practical demonstration of how Python can be part of an
 HPC workflow when it is used with the right abstractions, optimized numerical
