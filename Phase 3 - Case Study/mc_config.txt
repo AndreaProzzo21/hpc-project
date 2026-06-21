@@ -1,0 +1,4 @@
+total_points=1000000
+dimensions=2
+radius=0.5
+convergence=1.0e-6
